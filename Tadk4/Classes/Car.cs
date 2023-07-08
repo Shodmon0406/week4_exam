@@ -1,0 +1,37 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Task4.Classes
+{
+    internal class Car : IVehicle
+    {
+        public bool IsRunning { get; set; }
+        public int Speed { get; set; }
+        public void Start()
+        {
+            IsRunning = true;
+            Console.WriteLine("Starting car engine.");
+        }
+
+        public void Stop()
+        {
+            IsRunning = false;
+            Console.WriteLine("Stoping car engine.");
+        }
+        public void Drive()
+        {
+            if (Speed > 0)
+            {
+                Console.WriteLine("Driving down the road");
+                Console.WriteLine($"Driving at {Speed} mph");
+            }
+            else
+            {
+                Console.WriteLine("Car is not driving");
+            }
+        }
+    }
+}
